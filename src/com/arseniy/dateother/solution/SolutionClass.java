@@ -33,14 +33,12 @@ public class SolutionClass {
 
     public static double convertNumber(String strToConvert) {
 
-        System.out.println(strToConvert);
         strToConvert = strToConvert.replace(".", ",");
         NumberFormat format = NumberFormat.getInstance(Locale.getDefault());
         double d = 0;
         try {
             Number number = format.parse(strToConvert);
             d = number.doubleValue();
-            System.out.println(d);
         } catch (ParseException e) {
             e.printStackTrace();
         }
